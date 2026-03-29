@@ -22,24 +22,37 @@ class Vatnuoi:
     def getMauSac (self):
         return self.__mauSac
 
-    def gettuoi (self):
+    def getTuoi (self):
         return self.__tuoi
 
     def getCanNang (self):
         return self.__canNang
 
     def setGiong (self, giongMoi):
-        self.__giong = giongMoi
-
+        if giongMoi == "": print("Gia tri khong duoc de trong")
+        else: self.__giong = giongMoi
+ 
     def setMauSac (self, mauSacmoi):
-        self.__mauSac = mauSacmoi
+        if mauSacmoi == "": print("Gia tri khong duoc de trong")
+        else: self.__mauSac = mauSacmoi
 
-    def settuoi (self, tuoiMoi):
-        self.__tuoi = tuoiMoi
+    def setTuoi (self, tuoiMoi):
+        if tuoiMoi == "": print("Gia tri khong duoc la so am")
+        else: self.__tuoi = tuoiMoi
 
     def setCanNang (self, canNangMoi):
-        self.__canNang = canNangMoi
+        if canNangMoi == "": print("Gia tri khong duoc la so am")
+        else: self.__canNang = canNangMoi
 
 # tao doi tuong
 meo1 = Vatnuoi("meo", "den")
+print(meo1)
+
+# gan gia tri cho thuoc tinh
+print(meo1.getTuoi())
+meo1.setTuoi(tuoiMoi=2)
+
+meo1.setCanNang(canNangMoi=3.5)
+print(meo1.getCanNang())
+
 print(meo1)
